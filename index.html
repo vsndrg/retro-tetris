@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#251d17">
+  <title>Блоки — ретро-аркада</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="cabinet">
+    <header class="marquee">
+      <h1><img src="art/blocks.png" width="42" height="11" alt="Блоки"></h1>
+    </header>
+
+    <section class="bezel" aria-label="Игровой экран">
+      <div class="tube">
+        <div class="board-screen">
+          <canvas id="board" class="board-grid" width="300" height="600"
+            role="img" aria-label="Игровое поле, 10 столбцов и 20 строк" tabindex="-1"></canvas>
+          <div id="start-screen" class="start-screen">
+            <img src="art/attract.png" width="100" height="200" alt="">
+          </div>
+        </div>
+
+        <aside class="readouts" aria-label="Сведения о партии">
+          <dl class="stats">
+            <div class="stat stat-score">
+              <dt>Очки</dt>
+              <dd id="score">000000</dd>
+            </div>
+            <div class="stat stat-record">
+              <dt>Рекорд</dt>
+              <dd id="record">000000</dd>
+            </div>
+            <div class="stat">
+              <dt>Линии</dt>
+              <dd id="lines">000</dd>
+            </div>
+            <div class="stat">
+              <dt>Уровень</dt>
+              <dd id="level">01</dd>
+            </div>
+          </dl>
+
+          <section class="next" aria-labelledby="next-title">
+            <h2 id="next-title">Следующая</h2>
+            <canvas id="next-piece" class="preview-grid" width="96" height="96"
+              role="img" aria-label="Предпросмотр следующей фигуры"></canvas>
+          </section>
+          <p id="board-status" class="board-status" role="status">Ожидание</p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="control-panel">
+      <button id="start" class="button start-button" type="button">Старт</button>
+      <button id="restart" class="button restart-button" type="button" disabled>Перезапуск</button>
+    </div>
+  </main>
+</body>
+</html>
