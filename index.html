@@ -23,6 +23,14 @@
           <div id="start-screen" class="start-screen">
             <img src="art/attract.png" width="100" height="200" alt="">
           </div>
+          <div id="pause-screen" class="round-screen" hidden>
+            <strong>Пауза</strong>
+            <span><kbd>P</kbd> — продолжить</span>
+          </div>
+          <div id="game-over-screen" class="round-screen" hidden>
+            <strong>Конец игры</strong>
+            <span>Нажмите «Перезапуск»</span>
+          </div>
         </div>
 
         <aside class="readouts" aria-label="Сведения о партии">
@@ -59,6 +67,14 @@
       <button id="start" class="button start-button" type="button">Старт</button>
       <button id="restart" class="button restart-button" type="button" disabled>Перезапуск</button>
     </div>
+    <ul class="key-guide" aria-label="Клавиши управления">
+      <li><kbd>←</kbd> <kbd>→</kbd> Движение</li>
+      <li><kbd>↑</kbd> Поворот вправо</li>
+      <li><kbd>Z</kbd> Поворот влево</li>
+      <li><kbd>↓</kbd> Ускорить</li>
+      <li><kbd>Пробел</kbd> Сбросить</li>
+      <li><kbd>P</kbd> Пауза</li>
+    </ul>
   </main>
 </body>
 </html>
